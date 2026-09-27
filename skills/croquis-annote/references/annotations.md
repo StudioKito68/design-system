@@ -6,7 +6,9 @@
 - **Détail** (facultatif, plus petit, gris) : dimension, finition, quincaillerie →
   « ép. 30 mm – huile naturelle ».
 - Français, majuscule initiale, pas de point final, 4 mots max pour le titre.
-- Unités : cm pour les dimensions d'ensemble, mm pour les épaisseurs.
+- **Unités : toutes les dimensions sont en millimètres (mm)**, y compris les dimensions
+  d'ensemble : « 1800 × 900 mm », « ép. 30 mm », « H 750 mm ». Jamais de cm ni de m.
+  Nombres sans séparateur de milliers (1800, pas 1 800).
 - 4 à 8 annotations sur A4 ; au-delà, passer en A3 ou regrouper.
 - Ordre de lecture naturel : de haut en bas de chaque côté (le script trie automatiquement).
 
@@ -32,7 +34,7 @@
     {"texte": "Pieds fuselés", "ancre": [0.30, 0.85], "cote": "gauche", "etiquette_y": 0.9}
   ],
   "cotes": [
-    {"de": [0.20, 0.80], "a": [0.78, 0.80], "texte": "180 cm", "decalage": 0.05}
+    {"de": [0.20, 0.80], "a": [0.78, 0.80], "texte": "1800", "decalage": 0.05}
   ]
 }
 ```
@@ -49,7 +51,7 @@
 | `annotations[].ancre` | Point visé `[x, y]`, fractions de l'image **source** (lire sur `--grille`). |
 | `annotations[].cote` | `gauche`, `droite` ou `auto` (défaut : selon la position de l'ancre). |
 | `annotations[].etiquette_y` | Force la hauteur souhaitée de l'étiquette (même repère que l'ancre). |
-| `cotes[]` | Ligne de cote entre `de` et `a` ; `decalage` (fraction de l'image, signe = côté) écarte la ligne de l'objet. |
+| `cotes[]` | Ligne de cote entre `de` et `a` ; `texte` en mm (un nombre seul, ex. `"1800"`, reçoit automatiquement « mm ») ; `decalage` (fraction de l'image, signe = côté) écarte la ligne de l'objet. |
 
 ## Bonnes pratiques de placement
 

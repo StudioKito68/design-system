@@ -265,7 +265,10 @@ def composer(spec, dossier_spec):
         if angle > 90 or angle < -90:
             angle += 180
         milieu = ((q0[0] + q1[0]) / 2 + nx * mm(4), (q0[1] + q1[1]) / 2 + ny * mm(4))
-        texte_tourne(page, c["texte"], f_cote, ENCRE, milieu, angle)
+        texte = str(c["texte"]).strip()
+        if texte.replace(" ", "").isdigit():  # cotes exprimées en mm par convention
+            texte += " mm"
+        texte_tourne(page, texte, f_cote, ENCRE, milieu, angle)
 
     # --- Cartouche ---
     y_c = H - marge - h_cartouche

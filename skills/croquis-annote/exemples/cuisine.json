@@ -16,7 +16,7 @@
   "annotations": [
     {
       "texte": "Suspensions rotin",
-      "detail": "x3, hauteur 75 cm au-dessus du plateau",
+      "detail": "x3, à 750 mm au-dessus du plateau",
       "ancre": [
         0.37,
         0.33
@@ -32,7 +32,7 @@
     },
     {
       "texte": "Table chêne massif",
-      "detail": "180 × 90 cm – finition huile naturelle",
+      "detail": "1800 × 900 mm – finition huile naturelle",
       "ancre": [
         0.44,
         0.66
@@ -86,7 +86,7 @@
         0.63,
         0.69
       ],
-      "texte": "180 cm",
+      "texte": "1800",
       "decalage": 0.04
     }
   ]

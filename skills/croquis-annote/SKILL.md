@@ -39,7 +39,7 @@ Compléter si absent (demander en une seule fois, proposer des valeurs par défa
 - ce qui **diffère de la photo** (essence de bois, couleur, dimensions, poignées…) —
   c'est souvent le cœur de la demande : la photo sert de base, le croquis montre le projet ;
 - mise en scène : objet seul sur fond blanc (défaut) ou dans un intérieur suggéré ;
-- cotes à faire figurer (L × P × H).
+- cotes à faire figurer (L × P × H), **toujours en mm** (convertir si Franck donne des cm).
 
 ### 2. Analyser la photo
 
@@ -111,7 +111,7 @@ Si un défaut est bloquant → proposer un **prompt de correction ciblé** (voir
 ## Relecture avant livraison (checklist)
 
 - [ ] Orthographe et accents des annotations (français, majuscule initiale, pas de point final).
-- [ ] Unités cohérentes (cm partout, ou mm partout pour les épaisseurs — « ép. 30 mm »).
+- [ ] Toutes les dimensions en **mm** (« 1800 × 900 mm », « ép. 30 mm ») — aucune en cm ou m.
 - [ ] Chaque ancre tombe bien sur l'élément nommé.
 - [ ] Pas plus de 8 annotations sur A4 (au-delà : A3 ou regrouper).
 - [ ] Cartouche complet : titre, projet, client, date, version.
