@@ -1,0 +1,93 @@
+{
+  "image": "../assets/reference-style.jpg",
+  "rognage": [
+    0.0,
+    0.1,
+    1.0,
+    1.0
+  ],
+  "format": "A4",
+  "orientation": "paysage",
+  "titre": "Cuisine ouverte – intention d'aménagement",
+  "projet": "Appartement Mulhouse",
+  "client": "M. & Mme Exemple",
+  "date": "27/09/2026",
+  "version": "V1",
+  "annotations": [
+    {
+      "texte": "Suspensions rotin",
+      "detail": "x3, hauteur 75 cm au-dessus du plateau",
+      "ancre": [
+        0.37,
+        0.33
+      ]
+    },
+    {
+      "texte": "Colonne fours",
+      "detail": "four + micro-ondes encastrés",
+      "ancre": [
+        0.03,
+        0.36
+      ]
+    },
+    {
+      "texte": "Table chêne massif",
+      "detail": "180 × 90 cm – finition huile naturelle",
+      "ancre": [
+        0.44,
+        0.66
+      ]
+    },
+    {
+      "texte": "Chaises coque terracotta",
+      "ancre": [
+        0.12,
+        0.63
+      ]
+    },
+    {
+      "texte": "Façades vert olive",
+      "detail": "cadre shaker, laque mate",
+      "ancre": [
+        0.57,
+        0.26
+      ]
+    },
+    {
+      "texte": "Crédence briquettes blanches",
+      "ancre": [
+        0.64,
+        0.37
+      ]
+    },
+    {
+      "texte": "Carreaux de ciment",
+      "detail": "motif fleur bleu / rouge",
+      "ancre": [
+        0.73,
+        0.64
+      ]
+    },
+    {
+      "texte": "Réfrigérateur inox",
+      "ancre": [
+        0.91,
+        0.45
+      ]
+    }
+  ],
+  "cotes": [
+    {
+      "de": [
+        0.37,
+        0.82
+      ],
+      "a": [
+        0.63,
+        0.69
+      ],
+      "texte": "180 cm",
+      "decalage": 0.04
+    }
+  ]
+}
