@@ -19,6 +19,7 @@ import json
 import math
 import os
 import random
+import re
 import sys
 import zlib
 
@@ -84,12 +85,18 @@ def largeur_texte(draw, texte, fnt):
     return x1 - x0
 
 
+def insecables(texte):
+    """Typographie française : un nombre ne se sépare jamais de son unité (« 8 cm », « ép. 8 »)."""
+    texte = re.sub(r"(\d) (?=(?:cm|mm|m)\b)", "\\1\u00a0", texte)
+    return re.sub(r"\bép\. ", "ép.\u00a0", texte)
+
+
 def couper(draw, texte, fnt, largeur_max):
-    """Retour à la ligne simple au mot."""
+    """Retour à la ligne simple au mot (les espaces insécables ne coupent pas)."""
     lignes = []
-    for paragraphe in texte.split("\n"):
+    for paragraphe in insecables(texte).split("\n"):
         courant = ""
-        for mot in paragraphe.split():
+        for mot in [m for m in paragraphe.split(" ") if m]:
             essai = (courant + " " + mot).strip()
             if largeur_texte(draw, essai, fnt) <= largeur_max or not courant:
                 courant = essai
