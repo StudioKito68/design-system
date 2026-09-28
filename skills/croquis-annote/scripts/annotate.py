@@ -266,8 +266,8 @@ def composer(spec, dossier_spec):
             angle += 180
         milieu = ((q0[0] + q1[0]) / 2 + nx * mm(4), (q0[1] + q1[1]) / 2 + ny * mm(4))
         texte = str(c["texte"]).strip()
-        if texte.replace(" ", "").isdigit():  # cotes exprimées en mm par convention
-            texte += " mm"
+        if texte.replace(" ", "").replace(",", "").isdigit():  # nombre seul : cm par convention
+            texte += " cm"
         texte_tourne(page, texte, f_cote, ENCRE, milieu, angle)
 
     # --- Cartouche ---

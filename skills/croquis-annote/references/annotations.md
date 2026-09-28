@@ -4,11 +4,13 @@
 
 - **Titre** (1re ligne, plus gros) : l'élément + le matériau → « Plateau chêne massif ».
 - **Détail** (facultatif, plus petit, gris) : dimension, finition, quincaillerie →
-  « ép. 30 mm – huile naturelle ».
+  « ép. 3 cm – huile naturelle ».
 - Français, majuscule initiale, pas de point final, 4 mots max pour le titre.
-- **Unités : toutes les dimensions sont en millimètres (mm)**, y compris les dimensions
-  d'ensemble : « 1800 × 900 mm », « ép. 30 mm », « H 750 mm ». Jamais de cm ni de m.
-  Nombres sans séparateur de milliers (1800, pas 1 800).
+- **Unités : pensées pour la lecture client, pas pour l'atelier.**
+  - **cm** pour le mobilier et les détails : « 180 × 90 cm », « H 75 cm », « ép. 3 cm », « ép. 1,8 cm ».
+  - **m** pour les grandes longueurs d'aménagement (au-delà de 3 m) : « 3,20 m », « 4,50 m ».
+  - Jamais de mm sur la planche client (les mm restent pour les plans d'atelier).
+  - Virgule décimale française, au plus une décimale en cm, deux en m.
 - 4 à 8 annotations sur A4 ; au-delà, passer en A3 ou regrouper.
 - Ordre de lecture naturel : de haut en bas de chaque côté (le script trie automatiquement).
 
@@ -29,12 +31,12 @@
   "couleur_accent": "#b5563c",
   "largeur_colonne": 0.2,
   "annotations": [
-    {"texte": "Plateau chêne massif", "detail": "ép. 30 mm – huile naturelle", "ancre": [0.45, 0.32]},
+    {"texte": "Plateau chêne massif", "detail": "ép. 3 cm – huile naturelle", "ancre": [0.45, 0.32]},
     {"texte": "Poignées laiton brossé", "ancre": [0.62, 0.55], "cote": "droite"},
     {"texte": "Pieds fuselés", "ancre": [0.30, 0.85], "cote": "gauche", "etiquette_y": 0.9}
   ],
   "cotes": [
-    {"de": [0.20, 0.80], "a": [0.78, 0.80], "texte": "1800", "decalage": 0.05}
+    {"de": [0.20, 0.80], "a": [0.78, 0.80], "texte": "180", "decalage": 0.05}
   ]
 }
 ```
@@ -51,7 +53,7 @@
 | `annotations[].ancre` | Point visé `[x, y]`, fractions de l'image **source** (lire sur `--grille`). |
 | `annotations[].cote` | `gauche`, `droite` ou `auto` (défaut : selon la position de l'ancre). |
 | `annotations[].etiquette_y` | Force la hauteur souhaitée de l'étiquette (même repère que l'ancre). |
-| `cotes[]` | Ligne de cote entre `de` et `a` ; `texte` en mm (un nombre seul, ex. `"1800"`, reçoit automatiquement « mm ») ; `decalage` (fraction de l'image, signe = côté) écarte la ligne de l'objet. |
+| `cotes[]` | Ligne de cote entre `de` et `a` ; `texte` avec son unité (« 180 cm », « 3,20 m ») ; un nombre seul (ex. `"180"`) reçoit automatiquement « cm » ; `decalage` (fraction de l'image, signe = côté) écarte la ligne de l'objet. |
 
 ## Bonnes pratiques de placement
 
