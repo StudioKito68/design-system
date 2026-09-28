@@ -22,7 +22,7 @@ import random
 import sys
 import zlib
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 DPI = 300
 FORMATS_MM = {"A4": (297, 210), "A3": (420, 297)}
@@ -202,6 +202,18 @@ def composer(spec, dossier_spec):
     iw, ih = int(croquis.width * ratio), int(croquis.height * ratio)
     croquis = croquis.resize((iw, ih), Image.LANCZOS)
     ix, iy = x_zone0 + (zw - iw) // 2, zone_haut + (zh - ih) // 2
+    # Fondu des bords vers la couleur du papier : évite l'arête nette d'un lavis recadré.
+    fondu = float(spec.get("fondu", 0.06))
+    if fondu > 0:
+        f = max(1, int(min(iw, ih) * fondu))
+        rampe_x = [min(1.0, x / f, (iw - 1 - x) / f) for x in range(iw)]
+        rampe_y = [min(1.0, y / f, (ih - 1 - y) / f) for y in range(ih)]
+        mx = Image.new("L", (iw, 1))
+        mx.putdata([int(255 * v) for v in rampe_x])
+        my = Image.new("L", (1, ih))
+        my.putdata([int(255 * v) for v in rampe_y])
+        masque = ImageChops.multiply(mx.resize((iw, ih)), my.resize((iw, ih)))
+        croquis = Image.composite(croquis, Image.new("RGB", (iw, ih), PAPIER), masque)
     page.paste(croquis, (ix, iy))
 
     def vers_page(p):

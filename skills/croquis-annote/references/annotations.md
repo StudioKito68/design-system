@@ -48,6 +48,7 @@
 | `format` / `orientation` | `A4`/`A3`, `paysage`/`portrait`. Défaut A4 paysage. |
 | `titre`, `projet`, `client`, `date`, `version`, `mention` | Cartouche. |
 | `marque`, `signature` | Remplacent « STUDIO KITO » et la ligne sous la marque. |
+| `fondu` | Largeur du fondu des bords du croquis vers le papier, fraction du petit côté (défaut 0.06, 0 pour désactiver). |
 | `couleur_accent` | Couleur des points d'ancrage (défaut terracotta). |
 | `largeur_colonne` | Largeur des colonnes d'annotations, fraction de la page (défaut 0.2). |
 | `annotations[].ancre` | Point visé `[x, y]`, fractions de l'image **source** (lire sur `--grille`). |
